@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess - Game</title>
+    <link rel="icon" type="image/x-icon" href="images/light-bulb.png" />
+    <link rel="stylesheet" href="mystyle.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <img class="demo-bg" src="yoriichi.jpg" alt=""> -->
+    <div class="container">
+      <div class="col">
+        <div class="row">
+          <h1 class="tag-guess-me">Guess ME!</h1>
+        </div>
+        <div class="row">
+          <!-- <label for="myInput">Input Guess:</label> -->
+          <input
+            type="number"
+            id="myInput"
+            class="rounded-input"
+            placeholder="guess here..."
+          />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="container-sm" id="cont2">
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-info btn-lg btn-cust"
+                  id="myBadden"
+                  onclick="meGetClick()"
+                >
+                  Guess
+                </button>
+              </div>
+              <div class="row">
+                <h4 id="tagDetect">Guessing Count: 0</h4>
+                <h5 id="tagLevel">Level: 0</h5>
+                <h5 id="tagNumTBG">Number to be Guess:</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container-sm" id="cont3">
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-success btn-lg btn-cust"
+                  id="btnShuffle"
+                  onclick="shuffleNumber()"
+                >
+                  Reset
+                </button>
+              </div>
+              <div class="row">
+                <h4 id="maxGuessing">Max Guessing: 0</h4>
+                <h5>Cooler --> Guessed Value is above the Answer</h5>
+                <h5>Hotter --> Guessed Value is below the Answer</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h3 id="tagHigh">Highest Score:</h3>
+        </div>
+        <div class="row">
+          <h3 id="highScoreTag">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>
